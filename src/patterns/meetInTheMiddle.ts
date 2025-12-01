@@ -135,13 +135,15 @@ export function balancedPartition(nums: number[]): {
     }
   }
 
-  const partition1 = bestSubset;
-  const partition2 = nums.filter(
-    (x) => !partition1.includes(x) || partition1.splice(partition1.indexOf(x), 1).length === 0
-  );
+  // Build the second partition based on indices not in bestSubset
+  const partition1Indices = new Set<number>();
+  for (const val of bestSubset) {
+    const idx = nums.findIndex((n, i) => n === val && !partition1Indices.has(i));
+    if (idx !== -1) partition1Indices.add(idx);
+  }
 
   return {
-    partition: [partition1, nums.filter((_, i) => !bestSubset.includes(nums[i]))],
+    partition: [bestSubset, nums.filter((_, i) => !partition1Indices.has(i))],
     difference: Math.abs(total - 2 * bestSum),
   };
 }

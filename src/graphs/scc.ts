@@ -7,7 +7,7 @@
  * Use: Collapse SCCs to DAG, reasoning about cycles and components.
  */
 
-import { Graph } from './bfsDfs';
+import type { Graph } from './bfsDfs';
 
 export interface SCCResult {
   components: number[][];

@@ -209,7 +209,9 @@ export default function AlgorithmPage() {
     }
   }, [info]);
 
+  // Reset demo result when algorithm changes - this is intentional
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDemoResult('');
   }, [categoryId, algorithmId]);
 

@@ -12,7 +12,7 @@ export function buildSuffixArray(s: string): number[] {
   if (n === 0) return [];
 
   // Create suffix indices with initial ranking
-  let suffixes = Array.from({ length: n }, (_, i) => ({
+  const suffixes = Array.from({ length: n }, (_, i) => ({
     index: i,
     rank: [s.charCodeAt(i), i + 1 < n ? s.charCodeAt(i + 1) : -1],
   }));

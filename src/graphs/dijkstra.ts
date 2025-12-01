@@ -256,7 +256,7 @@ export function demo(): string {
         [3, 5],
       ],
     ],
-    [[3, []]],
+    [3, []],
   ]);
 
   console.log('Graph:');

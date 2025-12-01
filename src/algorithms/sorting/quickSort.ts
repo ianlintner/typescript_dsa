@@ -8,7 +8,7 @@
  * Notes: Use randomized/median-of-three pivot; switch to insertion sort for small slices.
  */
 
-import { SortStep } from './bubbleSort';
+import type { SortStep } from './bubbleSort';
 
 export function quickSort(arr: number[]): number[] {
   const result = [...arr];

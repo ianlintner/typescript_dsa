@@ -7,7 +7,7 @@
  * Notes: Only works on DAGs (Directed Acyclic Graphs).
  */
 
-import { Graph } from './bfsDfs';
+import type { Graph } from './bfsDfs';
 
 export interface TopSortStep {
   inDegree: Map<number, number>;

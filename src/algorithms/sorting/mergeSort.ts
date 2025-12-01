@@ -8,7 +8,7 @@
  * When to use: Guaranteed O(n log n), external sorting, stable requirement.
  */
 
-import { SortStep } from './bubbleSort';
+import type { SortStep } from './bubbleSort';
 
 export function mergeSort(arr: number[]): number[] {
   if (arr.length <= 1) return [...arr];

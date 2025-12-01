@@ -8,7 +8,7 @@
  * When to use: O(1) extra memory requirement with predictable O(n log n).
  */
 
-import { SortStep } from './bubbleSort';
+import type { SortStep } from './bubbleSort';
 
 export function heapSort(arr: number[]): number[] {
   const result = [...arr];

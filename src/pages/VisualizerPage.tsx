@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { bubbleSortWithSteps, SortStep } from '../algorithms/sorting/bubbleSort';
+import { bubbleSortWithSteps } from '../algorithms/sorting/bubbleSort';
+import type { SortStep } from '../algorithms/sorting/bubbleSort';
 import { selectionSortWithSteps } from '../algorithms/sorting/selectionSort';
 import { insertionSortWithSteps } from '../algorithms/sorting/insertionSort';
 import { mergeSortWithSteps } from '../algorithms/sorting/mergeSort';
@@ -44,11 +45,12 @@ export default function VisualizerPage() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [inputArray, setInputArray] = useState('');
   
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Initialize array
+  // Initialize array when size changes - intentional state sync
   useEffect(() => {
     const newArray = generateRandomArray(arraySize);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setArray(newArray);
     setSteps([]);
     setCurrentStep(0);
@@ -71,6 +73,7 @@ export default function VisualizerPage() {
         setCurrentStep((prev) => prev + 1);
       }, speed);
     } else if (currentStep >= steps.length - 1) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsPlaying(false);
     }
 

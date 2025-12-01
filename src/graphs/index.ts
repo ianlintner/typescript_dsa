@@ -1,8 +1,20 @@
-export * from './bfsDfs';
-export * from './dijkstra';
-export * from './aStar';
-export * from './bellmanFord';
-export * from './floydWarshall';
-export * from './mst';
-export * from './topologicalSort';
-export * from './scc';
+// Graph algorithms - individual exports to avoid conflicts
+export { bfs, bfsWithSteps, dfs, dfsIterative, dfsWithSteps, shortestPath, hasCycle, countComponents } from './bfsDfs';
+export type { Graph, TraversalStep } from './bfsDfs';
+export { dijkstra, dijkstraWithSteps, dijkstraGrid } from './dijkstra';
+export { getPath as dijkstraGetPath } from './dijkstra';
+export type { WeightedGraph, DijkstraStep, DijkstraResult } from './dijkstra';
+export { aStar, aStarWithSteps, greedyBestFirst, manhattanDistance, euclideanDistance, chebyshevDistance } from './aStar';
+export type { AStarStep, AStarResult } from './aStar';
+export { bellmanFord, graphToEdges } from './bellmanFord';
+export { getPath as bellmanFordGetPath } from './bellmanFord';
+export type { BellmanFordResult } from './bellmanFord';
+export { floydWarshall, transitiveClosure, findNodesAffectedByNegativeCycle } from './floydWarshall';
+export { getPath as floydWarshallGetPath } from './floydWarshall';
+export type { FloydWarshallResult } from './floydWarshall';
+export { kruskal, kruskalWithSteps, prim, primWithSteps, edgesToAdjList } from './mst';
+export type { MSTStep, MSTResult } from './mst';
+export { topologicalSortKahn, topologicalSortKahnWithSteps, topologicalSortDFS, allTopologicalOrders, isDAG } from './topologicalSort';
+export type { TopSortStep } from './topologicalSort';
+export { tarjanSCC, kosarajuSCC, condensationGraph, isStronglyConnected, findArticulationPoints, findBridges } from './scc';
+export type { SCCResult } from './scc';

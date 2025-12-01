@@ -8,7 +8,7 @@
  * When to use: Tiny inputs, minimal swaps needed situations.
  */
 
-import { SortStep } from './bubbleSort';
+import type { SortStep } from './bubbleSort';
 
 export function selectionSort(arr: number[]): number[] {
   const result = [...arr];

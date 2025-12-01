@@ -7,7 +7,7 @@
  * Notes: Can detect negative cycles. Slower than Dijkstra for non-negative weights.
  */
 
-import { WeightedGraph } from './dijkstra';
+import type { WeightedGraph } from './dijkstra';
 
 export interface BellmanFordResult {
   distances: Map<number, number>;

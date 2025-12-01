@@ -8,7 +8,7 @@
  * When to use: Nearly sorted data, small arrays, as base-case for hybrid sorts.
  */
 
-import { SortStep } from './bubbleSort';
+import type { SortStep } from './bubbleSort';
 
 export function insertionSort(arr: number[]): number[] {
   const result = [...arr];
