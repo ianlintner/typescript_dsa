@@ -8,6 +8,60 @@ import * as insertionSort from '../algorithms/sorting/insertionSort';
 import * as mergeSort from '../algorithms/sorting/mergeSort';
 import * as quickSort from '../algorithms/sorting/quickSort';
 import * as heapSort from '../algorithms/sorting/heapSort';
+import * as countingSort from '../algorithms/sorting/countingSort';
+import * as radixSort from '../algorithms/sorting/radixSort';
+
+// Import searching algorithms
+import * as linearSearch from '../algorithms/searching/linearSearch';
+import * as binarySearch from '../algorithms/searching/binarySearch';
+import * as advancedSearch from '../algorithms/searching/advancedSearch';
+import * as quickSelect from '../algorithms/searching/quickSelect';
+
+// Import graph algorithms
+import * as bfsDfs from '../graphs/bfsDfs';
+import * as dijkstra from '../graphs/dijkstra';
+import * as bellmanFord from '../graphs/bellmanFord';
+import * as floydWarshall from '../graphs/floydWarshall';
+import * as aStar from '../graphs/aStar';
+import * as mst from '../graphs/mst';
+import * as topologicalSort from '../graphs/topologicalSort';
+
+// Import DP algorithms
+import * as fibonacci from '../dp/fibonacci';
+import * as coinChange from '../dp/coinChange';
+import * as knapsack from '../dp/knapsack';
+import * as lcs from '../dp/lcs';
+import * as editDistance from '../dp/editDistance';
+import * as lis from '../dp/lis';
+import * as bitmaskTsp from '../dp/bitmaskTsp';
+import * as stateCompressionGrid from '../dp/stateCompressionGrid';
+
+// Import data structures
+import * as unionFind from '../data-structures/unionFind';
+import * as trie from '../data-structures/trie';
+import * as lruCache from '../data-structures/lruCache';
+import * as lfuCache from '../data-structures/lfuCache';
+import * as fenwickTree from '../data-structures/fenwickTree';
+import * as segmentTree from '../data-structures/segmentTree';
+import * as heapPatterns from '../data-structures/heapPatterns';
+
+// Import string algorithms
+import * as kmp from '../strings/kmp';
+import * as rabinKarp from '../strings/rabinKarp';
+import * as zAlgorithm from '../strings/zAlgorithm';
+import * as manacher from '../strings/manacher';
+import * as suffixArray from '../strings/suffixArray';
+
+// Import patterns
+import * as slidingWindow from '../patterns/slidingWindow';
+import * as twoPointers from '../patterns/twoPointers';
+import * as monotonicStack from '../patterns/monotonicStack';
+import * as backtracking from '../patterns/backtracking';
+import * as meetInTheMiddle from '../patterns/meetInTheMiddle';
+import * as binarySearchOnAnswer from '../patterns/binarySearchOnAnswer';
+
+// Import math utilities
+import * as numberTheory from '../math-utils/numberTheory';
 
 interface AlgorithmInfo {
   name: string;
@@ -16,6 +70,7 @@ interface AlgorithmInfo {
   timeComplexity: string;
   spaceComplexity: string;
   demo: () => string;
+  whenToUse?: string[];
 }
 
 const algorithmInfo: Record<string, Record<string, AlgorithmInfo>> = {
