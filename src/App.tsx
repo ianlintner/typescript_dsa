@@ -6,6 +6,9 @@ import AlgorithmPage from './pages/AlgorithmPage';
 import BigOPage from './pages/BigOPage';
 import VisualizerPage from './pages/VisualizerPage';
 
+// Get base path from Vite's import.meta.env.BASE_URL
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
+
 function Header() {
   const location = useLocation();
   
@@ -33,7 +36,7 @@ function Header() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Header />
       <main className="main-content">
         <Routes>
